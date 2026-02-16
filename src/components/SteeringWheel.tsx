@@ -1,0 +1,52 @@
+export default function SteeringWheel({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Outer badge circle */}
+      <circle
+        cx="100"
+        cy="100"
+        r="93"
+        stroke="currentColor"
+        strokeWidth="5"
+      />
+      {/* Wheel rim */}
+      <circle
+        cx="100"
+        cy="100"
+        r="69"
+        stroke="currentColor"
+        strokeWidth="16"
+      />
+      {/* Spoke: left (9 o'clock) */}
+      <path
+        d="M 82,85 L 39,92 L 39,108 L 82,115 A 23.5 23.5 0 0 1 82,85 Z"
+        fill="currentColor"
+      />
+      {/* Spoke: right (3 o'clock) */}
+      <path
+        d="M 118,85 L 161,92 L 161,108 L 118,115 A 23.5 23.5 0 0 0 118,85 Z"
+        fill="currentColor"
+      />
+      {/* Spoke: bottom (6 o'clock) */}
+      <path
+        d="M 85,118 L 92,161 L 108,161 L 115,118 A 23.5 23.5 0 0 1 85,118 Z"
+        fill="currentColor"
+      />
+      {/* Hub outer ring */}
+      <circle
+        cx="100"
+        cy="100"
+        r="21"
+        stroke="currentColor"
+        strokeWidth="5"
+      />
+      {/* Hub center fill */}
+      <circle cx="100" cy="100" r="13" fill="currentColor" />
+    </svg>
+  );
+}
